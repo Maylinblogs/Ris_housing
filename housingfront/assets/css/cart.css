@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/background.jpg') no-repeat;
+    background-position-y: -2500px;
+}
+
+.content {
+    width: 1300px;
+    margin: auto;
+}
+
+.cart {
+    margin-top: 70px;
+    background: rgba(255, 235, 205, 0.9);
+    padding: 30px;
+    width: 50%;
+}
+
+.cart__card-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Open Sans', sans-serif;
+}
+
+.card__creds {
+    /* background-color: blue; */
+    width: 800px;
+    display: flex;
+    column-gap: 50px;
+}
+
+.creds__thumbnail {
+    margin-left: 20px;
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
+}
+
+.price {
+    margin-right: 20px;
+    font-size: 20px;
+    color: dimgray;
+}
+
+.cart__buttons {
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__city {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.card__left {
+    display: flex;
+    column-gap: 30px;
+}
+
+.cart__button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    font-size: 18px;
+}
+
+.confirm-button {
+    background-color:mediumspringgreen;
+}
+
+#empty-result {
+    background-color: rgba(255, 235, 205, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.card__link {
+    text-decoration: none;
+    color: black;
+}
+
+.empty-cart {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Open Sans', sans-serif;
+    font-size: 50px;
+}

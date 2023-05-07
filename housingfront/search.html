@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Search results</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <div class="header__logo">
+                <a class="header__logo-link" href="/">
+                    <img class="logo" src="assets/img/giftbox.png" alt="logo"/>Дома
+                </a>
+            </div>
+
+            <div class="header__search">
+                <form onsubmit="return false" id="search-form">
+                    <input id="search-bar" class="header__search-bar" type="text" placeholder="Search.." name="search">
+                    <button class="header__search-button" type="submit"><span class="material-icons glass">search</span></button>
+                </form>
+            </div>
+            <div class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="menu-list__elem"><a class="menu-list__elem-link" href="cart.html"><span class="material-icons">shopping_cart</span></a></li>
+                    <li class="menu-list__elem"><a class="menu-list__elem-link" href="login.html">Log in</a></li>
+                    <li class="menu-list__elem"><a class="menu-list__elem-link" href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="content catalog" id="catalog">
+        <!-- <div class="card">
+            <img src="assets/img/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+            <h1><a href="/product.html">Jeans</a></h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the jeans..</p>
+            <p><button class="card__add-to-cart">Add to Cart</button></p>
+        </div> -->
+        <div class="catalog__container" id="catalog-container">
+
+        </div>
+        <section id="content-loader" class="content content__loader">
+            <div class="content__spinner"></div>
+        </section>  
+        <section id="empty-result" class="content ">
+            <h1>Your search returned no results!</h1>
+        </section>     
+    </div>
+    <!-- <div class="content"> -->
+        <button id="scroll-up" class="scroll-button" title="Scroll to top">
+            <span class="material-icons md-70 scroll-icon">arrow_circle_up</span>
+        </button>
+        <button id="scroll-down" class="scroll-button" title="Scroll to last scroll position" >
+            <span class="material-icons md-70 scroll-icon">arrow_circle_down</span>
+        </button>
+    <!-- </div> -->
+
+    <script src="assets/js/search.js"></script>
+</body>
+</html>

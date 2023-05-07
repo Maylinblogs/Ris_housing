@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header__content {
+    /* padding-top: 25px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: blanchedalmond;
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.header__logo {
+    margin-top: 18px;
+    font-family: Raleway;
+    font-size: 30px;
+    margin-left: 100px;
+}
+
+.header__logo-link {
+    text-decoration: none;
+    color:black;
+    display: flex;
+}
+
+.header__user-data {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    column-gap: 100px;
+    margin-right: 100px;
+}
+
+.content__list {
+    width: 25%;
+}
+
+.content__table {
+    margin-left: 200px;
+    overflow: auto;
+}
+
+/*.table {*/
+/*    width: 100%;*/
+/*}*/
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    /*border: 1px solid #ddd;*/
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table__search {
+    display: block;
+    padding-left: 20px;
+    font-size: 24px;
+    border: none;
+    height: 40px;
+    width: 70%;
+}
+
+.table__add {
+    padding-left: 20px;
+    font-size: 24px;
+    border: none;
+    height: 40px;
+    width: 30%;
+}
+
+.table__add:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.table__container {
+    display: flex;
+}
+
+.header__signout {
+    background: #ddd;
+    padding: 0;
+    height: 32px;
+    margin: 0 10px;
+    font-size: 17px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+}
+
+.header__signout:hover {
+    background-color: rgb(221, 221, 221, 0.7);
+}
+
+.action__delete {
+    background-color: rgb(255, 156, 156);
+    border: none;
+    width: 100px;
+    height: 100%;
+}
+
+.action__delete:hover {
+    background-color: rgb(255, 156, 156, 0.7);
+}
+
+.action__edit {
+    background-color: rgb(245, 165, 85);
+    border: none;
+    width: 100px;
+    height: 100%;
+}
+
+.action__edit:hover {
+    background-color: rgb(245, 165, 85, 0.7);
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: blanchedalmond;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__input {
+    margin: 10px 0;
+    width: 100%;
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+.modal__button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    font-size: 18px;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__confirm-button {
+    background-color:mediumspringgreen;
+}
+
+.modal__error {
+    color: red;
+}

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/background.jpg');
+}
+
+.content {
+    width: 1300px;
+    margin: auto;
+}
+
+.catalog {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.favs {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.catalog__container {
+    width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: none;
+    max-width: 300px;
+    margin: auto;
+    font-family: arial;
+    float: left;
+    width: calc(100%/5 - 20px);
+    margin-bottom: 70px;
+    background-color: white;
+    position: relative;
+}
+
+.card-info {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.name {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-overflow: ellipsis;
+}
+
+.card__added {
+    background-color: #d4d2d1;
+}
+
+.card__add-to-cart {    
+    background-color: blanchedalmond;
+    display: block;
+    color: black;
+    font-size: 1.3em;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.card__add-to-cart:hover {
+    opacity: 0.7;
+}
+
+.pagination-sorting {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    height: 60px;
+    background-color: blanchedalmond;
+    padding: 0 20px;
+}
+
+.pagination {
+    display: flex;
+    margin-top: 19px;
+    margin-left: 40px;
+    /* margin-top: 70px; */
+}
+
+.pagination__elem {
+    font-size: 17px;
+    margin: 0px 7px;
+}
+
+#prev {
+    margin-left: 0px;
+}
+
+.sorting {
+    margin-right: 40px;
+}
+
+.sorting__type-selector {
+    margin-top: 19px;
+    font-size: 17px;
+    border: none;
+    background: transparent;
+}
+
+.content__spinner {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-radius: 50%;
+    animation: 1s linear 0s normal none infinite running rot;
+}
+
+.content__loader {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#empty-result {
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.scroll-button {
+    background: none;
+    border-radius: 50%;
+    border-color: transparent;
+    width: 70px;
+    height: 70px;
+    display: none; /*change to none*/
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: 20px;
+    color: rgb(255, 235, 205, 0.8);
+    cursor: pointer;
+}
+
+.scroll-button:hover {
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.material-icons.md-70 { 
+    font-size: 70px; 
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fav-btn {
+    display: flex;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid transparent;
+    color: rgb(255, 235, 205);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 10px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 2.3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.fav-btn.active {
+    font-size: 1.7em;
+}
+
+.empty-cart {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    background-color: rgba(255, 235, 205, 0.9);
+}
+
+.favs-header {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    background-color: rgba(255, 235, 205, 0.9);
+    margin-bottom: 30px;
+}

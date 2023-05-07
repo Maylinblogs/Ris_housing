@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.content {
+    width: 1300px;
+    margin: auto;
+}
+
+.login-block {
+   height: 1000px; 
+   background: url('../img/background.jpg') center no-repeat;
+   /* background-color: blue; */
+}
+
+.login-block__content {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    background: blanchedalmond;
+    width: 600px;
+    height: 400px;
+    font-size: 32px;
+}
+
+.login-form__input {
+    width: 300px;
+    margin: 10px 0px;
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+.login-form__submit {
+    width: 312px;
+    background: #ddd;
+    border: none;
+    padding: 6px;
+    font-size: 17px;
+}
+
+.login-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.login-form__backlink-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form__backlink {
+    text-decoration: none;
+    color: black;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}

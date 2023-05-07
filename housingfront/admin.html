@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Admin bar</title>
+</head>
+<body>
+<!--    <header class="header">-->
+<!--        <div class="content header__content">-->
+<!--            <div class="header__logo">-->
+<!--                <a class="header__logo-link" href="/admin.html">-->
+<!--                    <img class="logo" src="assets/img/giftbox.png" alt="logo"/>Giftbox Admin UI-->
+<!--                </a>-->
+<!--            </div>-->
+
+<!--            <div class="header__user-data">-->
+<!--                <div class="header__username">-->
+<!--                    user info-->
+<!--                </div>-->
+<!--                <div class="header__logout">-->
+<!--                    logout button-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+
+<!--    <div class="content">-->
+<!--        <div class="w3-sidebar w3-light-grey w3-bar-block content__list">-->
+<!--            <h3 class="w3-bar-item">Resources</h3>-->
+<!--            <a href="admin.html?res=certificates" class="w3-bar-item w3-button">Certificates</a>-->
+<!--            <a href="admin.html?res=tags" class="w3-bar-item w3-button">Tags</a>-->
+<!--            <a href="admin.html?res=users" class="w3-bar-item w3-button">Users</a>-->
+<!--            <a href="admin.html?res=orders" class="w3-bar-item w3-button">Orders</a>-->
+<!--        </div>-->
+<!--        <div class="content__table">-->
+<!--            <div class="table__container">-->
+<!--                <input class="table__search" placeholder="Search..."/>-->
+<!--                <button class="table__add" >Add item</button>-->
+<!--            </div>-->
+<!--            <table class="table">-->
+<!--                <tr class="table__header">-->
+<!--                    <th>ID</th>-->
+<!--                    <th>Name</th>-->
+<!--                    <th>Description</th>-->
+<!--                    <th>Tags</th>-->
+<!--                    <th>Duration</th>-->
+<!--                    <th>Price</th>-->
+<!--                    <th>Creation Date</th>-->
+<!--                    <th>Last Modification Date</th>-->
+<!--                    <th>Actions</th>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>1</td>-->
+<!--                    <td>Free puppy</td>-->
+<!--                    <td>Grants a free puppy</td>-->
+<!--                    <td>Tag1 Tag2 Tag3</td>-->
+<!--                    <td>365 day(s)</td>-->
+<!--                    <td>200$</td>-->
+<!--                    <td>2018-08-29T06:12:12</td>-->
+<!--                    <td>2018-08-29T06:12:15</td>-->
+<!--                    <td>Edit Delete</td>-->
+<!--                </tr>-->
+<!--            </table>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="root">
+    </div>
+
+    <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

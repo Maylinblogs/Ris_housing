@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/background.jpg') no-repeat;
+    background-position-y: -2000px;
+}
+
+.content {
+    width: 1300px;
+    margin: auto;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: rgba(255, 235, 205, 0.9);
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.product__top-row {
+    width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    height: 550px;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.product__interactive-block {
+    width: calc(100%/4);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+}
+
+.interactive__header {
+    margin: 20px;
+}
+
+.interactive__desc {
+    margin: 20px;
+}
+
+.interactive__duration {
+    margin-left: 20px;
+}
+
+.interactive__price {
+    margin-right: 20px;
+}
+
+.interactive__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.interactive__add-to-cart {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.product__info {
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product__info > .price {
+    font-size: 1.4em;
+    color: dimgray;
+    text-align: center;
+}
+
+.product__description {
+    margin-top: 65px;
+    width: 1170px;
+    margin-left: 65px;
+}
+
+.thumbnail__picture {
+    max-width:100%;
+    max-height:100%;
+}
+
+.card__added {
+    background-color: #d4d2d1;
+}
+
+.card__add-to-cart {
+    background-color: white;
+}
+
+.card__add-to-cart:hover {
+    opacity: 0.7;
+}
+
+.card__button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card__download {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    background: whitesmoke;
+}
+
+.bad {
+    color: red;
+    font-weight: 500;
+}
+
+.mid {
+    color: darkorange;
+    font-weight: 500;
+}
+
+.perf {
+    color: green;
+    font-weight: 500;
+}
+
+.revs {
+    margin-top: 20px;
+}
+
+.rev__card {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 235, 205, 0.9);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rev__text {
+    font-size: 1.1em;
+}
+
+.rev__author {
+    font-weight: 500;
+}
+
+.rev__card-header {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.rev__textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.rev__range {
+    width: 400px;
+}
+
+.rev__notes {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rev__notes > .active {
+    font-weight: 700;
+}
+
+.rev__notes > * {
+    width: 10px;
+}
+
+.rev__card > .card__button {
+    margin-top: 10px;
+    width: 400px;
+}
+
+.product__inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.product__label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 15px;
+}
+
+.product__thumbnail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}

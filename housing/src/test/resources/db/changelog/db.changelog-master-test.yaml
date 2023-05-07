@@ -1,0 +1,465 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1681979712924-1
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_deal
+                  name: id
+                  type: INT
+              - column:
+                  name: estate_id
+                  type: INT
+              - column:
+                  name: user_id
+                  type: INT
+              - column:
+                  name: price
+                  type: INT
+              - column:
+                  name: days
+                  type: INT
+              - column:
+                  name: people_count
+                  type: INT
+              - column:
+                  name: arriving
+                  type: DATE
+            tableName: deal
+  - changeSet:
+      id: 1681979712924-2
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_estate
+                  name: id
+                  type: INT
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+              - column:
+                  name: street_name
+                  type: VARCHAR(255)
+              - column:
+                  name: house_number
+                  type: INT
+              - column:
+                  name: floor_number
+                  type: INT
+              - column:
+                  name: flat_number
+                  type: INT
+              - column:
+                  name: square
+                  type: INT
+              - column:
+                  name: type
+                  type: INT
+              - column:
+                  name: price
+                  type: INT
+              - column:
+                  name: latitude
+                  type: DOUBLE(9,6)
+              - column:
+                  name: longitude
+                  type: DOUBLE(9,6)
+            tableName: estate
+  - changeSet:
+      id: 1681979712924-3
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_person
+                  name: id
+                  type: INT
+              - column:
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  name: last_name
+                  type: VARCHAR(255)
+              - column:
+                  name: pass_identification_number
+                  type: VARCHAR(255)
+            tableName: person
+  - changeSet:
+      id: 1681979712924-4
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_role
+                  name: id
+                  type: INT
+              - column:
+                  name: role_name
+                  type: VARCHAR(255)
+            tableName: role
+  - changeSet:
+      id: 1681979712924-5
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_user
+                  name: id
+                  type: INT
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: phone_number
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: person_id
+                  type: INT
+              - column:
+                  name: role_id
+                  type: INT
+            tableName: user
+  - changeSet:
+      id: 1681979712924-6
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: estate_id
+            baseTableName: deal
+            constraintName: FK_DEAL_ON_ESTATE
+            referencedColumnNames: id
+            referencedTableName: estate
+  - changeSet:
+      id: 1681979712924-7
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: deal
+            constraintName: FK_DEAL_ON_USER
+            referencedColumnNames: id
+            referencedTableName: user
+  - changeSet:
+      id: 1681979712924-8
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: user
+            constraintName: FK_USER_ON_PERSON
+            referencedColumnNames: id
+            referencedTableName: person
+  - changeSet:
+      id: 1681979712924-9
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: role_id
+            baseTableName: user
+            constraintName: FK_USER_ON_ROLE
+            referencedColumnNames: id
+            referencedTableName: role
+  - changeSet:
+      id: 1680081834763-10
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: role_name
+                  value: "User"
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: role_name
+                  value: "Admin"
+  - changeSet:
+      id: 1680081834763-11
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - insert:
+            tableName: estate
+            columns:
+              - column:
+                  name: city
+                  value: "Klichev"
+              - column:
+                  name: street_name
+                  value: "Pobedy"
+              - column:
+                  name: house_number
+                  value: 69
+              - column:
+                  name: floor_number
+                  value: 3
+              - column:
+                  name: flat_number
+                  value: 42
+              - column:
+                  name: square
+                  value: 37
+              - column:
+                  name: type
+                  value: 1
+              - column:
+                  name: price
+                  value: 40
+              - column:
+                  name: latitude
+                  value: 53.483772
+              - column:
+                  name: longitude
+                  value: 29.340017
+
+  - changeSet:
+      id: 1680081834763-12
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: first_name
+                  value: Egor
+              - column:
+                  name: last_name
+                  value: Strupinski
+              - column:
+                  name: pass_identification_number
+                  value: A64646PB007
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: first_name
+                  value: Ivan
+              - column:
+                  name: last_name
+                  value: Sakun
+              - column:
+                  name: pass_identification_number
+                  value: A64646PB005
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: email
+                  value: user@a.com
+              - column:
+                  name: phone_number
+                  value: +123456789
+              - column:
+                  name: password
+                  value: $2a$10$ZDQSxhWvz02Lq92DmBoOAOyrqxlFOwqMAq2LVWBiuIit76fNMUSDK
+              - column:
+                  name: person_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 1
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: email
+                  value: admin@a.com
+              - column:
+                  name: phone_number
+                  value: +123456789
+              - column:
+                  name: password
+                  value: $2a$10$qkETt2hexeU8jQ7xgk8/wu/1/AZa9UZySpe8mS4ISGndyTY6QK2KS
+              - column:
+                  name: person_id
+                  value: 2
+              - column:
+                  name: role_id
+                  value: 2
+  - changeSet:
+      id: 1680081834763-13
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - insert:
+            tableName: deal
+            columns:
+              - column:
+                  name: estate_id
+                  value: 1
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: price
+                  value: 100
+              - column:
+                  name: days
+                  value: 3
+              - column:
+                  name: people_count
+                  value: 4
+              - column:
+                  name: arriving
+                  value: "2023-04-08"
+  - changeSet:
+      id: 1681979712924-14
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_review
+                  name: id
+                  type: INT
+              - column:
+                  name: text
+                  type: TEXT
+              - column:
+                  name: grade
+                  type: TINYINT
+              - column:
+                  name: estate_id
+                  type: INT
+              - column:
+                  name: author_id
+                  type: INT
+            tableName: review
+  - changeSet:
+      id: 1681979712924-15
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: author_id
+            baseTableName: review
+            constraintName: FK_REVIEW_ON_USER
+            referencedColumnNames: id
+            referencedTableName: user
+  - changeSet:
+      id: 1681979712924-16
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: estate_id
+            baseTableName: review
+            constraintName: FK_REVIEW_ON_ESTATE
+            referencedColumnNames: id
+            referencedTableName: estate
+  - changeSet:
+      id: 1681979712924-17
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: estate_id
+                  type: INT
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: user_id
+                  type: INT
+                  constraints:
+                    nullable: false
+                    unique: false
+            tableName: favourites
+  - changeSet:
+      id: 1681979712924-18
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: favourites
+            constraintName: FK_FAV_ON_USER
+            referencedColumnNames: id
+            referencedTableName: user
+  - changeSet:
+      id: 1681979712924-19
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: estate_id
+            baseTableName: favourites
+            constraintName: FK_FAV_ON_ESTATE
+            referencedColumnNames: id
+            referencedTableName: estate
+  - changeSet:
+      id: 1681979712924-20
+      author: tanya
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addPrimaryKey:
+            tableName: favourites
+            columnNames: user_id, estate_id

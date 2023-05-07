@@ -1,0 +1,167 @@
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 30px;
+    align-items: center;
+}
+
+.header {
+    background-color: blanchedalmond;
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.header__logo {
+    font-family: Raleway;
+    font-size: 30px;
+}
+
+.header__logo-link {
+    text-decoration: none;
+    color:black;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.header__search-bar {
+    width: 500px;
+    /*height: 20px;
+    padding: 6px;
+    border: none;
+    margin-top: 18px;
+    font-size: 17px; */
+
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+.header__search-button {
+
+    float: right;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 6px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    align-items: flex-start
+}
+
+.header__search-button:hover {
+    background-color: rgb(221, 221, 221, 0.7);
+}
+
+.header__menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list__elem {
+    padding: 0px 15px;
+    line-height: 32px;
+}
+
+.menu-list__elem-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* HEADER TAG SEARCH---------------------------------*/
+.search__tag-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    margin-left: 612px;
+    height: 300px;
+}
+
+.search__dropbutton {
+    background: #ddd;
+    padding: 0;
+    height: 32px;
+    margin: 0 10px;
+    font-size: 17px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search__dropbutton:hover {
+    background-color: rgb(221, 221, 221, 0.7);
+}
+
+#tag-search-bar {
+    box-sizing: border-box;
+    background-image: url('../img/searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+}
+
+#tag-search-bar:focus {
+    outline: 3px solid #ddd;
+}
+
+.dropdown__tag {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+.show {
+    display: block;
+}
+
+.selected {
+    background-color: #94ff77;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 0;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: blanchedalmond;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #c2d2e4;
+}
